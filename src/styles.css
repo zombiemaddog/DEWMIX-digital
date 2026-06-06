@@ -123,7 +123,7 @@ h3 {
 
 .brand img,
 .footer-brand img {
-  width: 158px;
+  width: 184px;
   max-width: 42vw;
   height: auto;
   object-fit: contain;
@@ -233,6 +233,13 @@ h3 {
   border-radius: 8px;
   padding: 1.1rem;
   background: rgba(11, 23, 39, 0.72);
+}
+
+.hero-logo {
+  width: min(100%, 460px);
+  height: auto;
+  margin-bottom: 1.2rem;
+  object-fit: contain;
 }
 
 .visual-header {
@@ -473,7 +480,7 @@ textarea:focus {
   }
 
   .brand img {
-    width: 132px;
+    width: 146px;
     max-width: 38vw;
   }
 
