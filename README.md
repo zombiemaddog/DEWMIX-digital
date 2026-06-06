@@ -38,7 +38,19 @@ npm run preview
 
 ## Deployment
 
-This project is suitable for Vercel, Netlify, or any static host.
+This project is suitable for GitHub Pages, Vercel, Netlify, or any static host.
+
+### GitHub Pages
+
+GitHub Pages must be configured to deploy from the `main` branch and the `/docs` folder. The production build writes a copy of the static site to `docs/` specifically for this deployment mode, including `docs/index.html`, `docs/src/`, and `docs/assets/`.
+
+Before merging deployment changes, run:
+
+```bash
+npm run build
+```
+
+Then commit the generated `docs/` output. Keep asset, stylesheet, and script URLs relative (for example `./src/styles.css` and `./assets/dewmix-logo.svg`) so the site works under the repository path `https://zombiemaddog.github.io/DEWMIX-digital/`. Do not use root-relative paths such as `/src/styles.css` or `/assets/logo.svg`.
 
 ### Vercel
 
