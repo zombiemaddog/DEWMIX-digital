@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">DEWMIX trust and contact visual</title>
+  <desc id="desc">Premium lower-page visual with secure message, emerald solution glow, and contact-ready status card.</desc>
+  <defs>
+    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/><stop offset="1" stop-color="#ffffff" stop-opacity="0.045"/></linearGradient>
+    <linearGradient id="edge" x1="0" x2="1"><stop offset="0" stop-color="#3ee69b"/><stop offset="1" stop-color="#21c7f7"/></linearGradient>
+    <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="30" stdDeviation="28" flood-color="#020711" flood-opacity="0.48"/></filter>
+  </defs>
+  <g opacity="0.38">
+    <circle cx="710" cy="118" r="102" fill="#21c7f7"/><circle cx="176" cy="548" r="136" fill="#3ee69b"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="156" y="96" width="588" height="468" rx="42" fill="#071425" fill-opacity="0.86" stroke="#ffffff" stroke-opacity="0.14"/>
+    <rect x="205" y="148" width="490" height="98" rx="28" fill="url(#glass)" stroke="#8aefff" stroke-opacity="0.24"/>
+    <text x="248" y="207" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="850" fill="#f4f8fb">Ready for a cleaner system</text>
+    <g transform="translate(224 296)">
+      <rect width="452" height="188" rx="30" fill="#ffffff" fill-opacity="0.055" stroke="url(#edge)" stroke-opacity="0.68"/>
+      <path d="M58 104l54 48 108-122" fill="none" stroke="#3ee69b" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+      <g font-family="Inter,Arial,sans-serif" font-weight="800" fill="#dff8ff">
+        <text x="248" y="75" font-size="21">Scope clearly</text>
+        <text x="248" y="115" font-size="21">Secure foundations</text>
+        <text x="248" y="155" font-size="21">Support after launch</text>
+      </g>
+    </g>
+    <g transform="translate(96 442) rotate(-8)">
+      <rect width="265" height="126" rx="30" fill="#02101d" stroke="#3ee69b" stroke-opacity="0.46"/>
+      <text x="32" y="58" font-family="Inter,Arial,sans-serif" font-size="22" font-weight="850" fill="#f4f8fb">Trusted handover</text>
+      <text x="32" y="91" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="750" fill="#91ffd0">No passwords in forms</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#8aefff" stroke-opacity="0.24" stroke-width="2">
+    <path d="M86 202h85M730 328h96M470 606h186"/>
+  </g>
+</svg>
