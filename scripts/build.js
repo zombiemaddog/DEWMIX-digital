@@ -4,17 +4,19 @@ import { fileURLToPath } from 'node:url';
 
 const root = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(root, '..');
-const outputDirs = ['dist', 'docs'].map((directory) => join(projectRoot, directory));
+const outputs = ['dist', 'docs'];
 
-async function buildStaticSite(outputDir) {
-  await rm(outputDir, { recursive: true, force: true });
-  await mkdir(outputDir, { recursive: true });
-  await cp(join(projectRoot, 'index.html'), join(outputDir, 'index.html'));
-  await cp(join(projectRoot, 'src'), join(outputDir, 'src'), { recursive: true });
-  await cp(join(projectRoot, 'assets'), join(outputDir, 'assets'), { recursive: true });
-  await writeFile(join(outputDir, '.nojekyll'), '');
+async function buildOutput(directory) {
+  const outputPath = join(projectRoot, directory);
+
+  await rm(outputPath, { recursive: true, force: true });
+  await mkdir(outputPath, { recursive: true });
+  await cp(join(projectRoot, 'index.html'), join(outputPath, 'index.html'));
+  await cp(join(projectRoot, 'src'), join(outputPath, 'src'), { recursive: true });
+  await cp(join(projectRoot, 'assets'), join(outputPath, 'assets'), { recursive: true });
+  await writeFile(join(outputPath, '.nojekyll'), '');
 }
 
-await Promise.all(outputDirs.map(buildStaticSite));
+await Promise.all(outputs.map(buildOutput));
 
 console.log('Built static site into dist/ and docs/');
