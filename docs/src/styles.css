@@ -150,6 +150,70 @@ h3 {
   text-decoration: none;
 }
 
+
+.language-switcher {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.2rem;
+  border: 1px solid rgba(167, 215, 255, 0.18);
+  border-radius: 999px;
+  padding: 0.22rem;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.language-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.28rem;
+  min-width: 3rem;
+  min-height: 34px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.34rem 0.52rem;
+  color: #dce9f4;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.76rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.language-option:focus-visible {
+  outline: 2px solid rgba(33, 199, 247, 0.5);
+  outline-offset: 2px;
+}
+
+.language-option.is-active {
+  color: #04101d;
+  background: linear-gradient(135deg, var(--accent), #d8f8ff);
+  box-shadow: 0 8px 24px rgba(33, 199, 247, 0.18);
+}
+
+.language-option:active {
+  transform: translateY(1px);
+}
+
+.language-flag {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
 .primary-nav a:hover,
 .footer-grid a:hover {
   color: var(--accent);
@@ -714,6 +778,10 @@ textarea:focus {
     margin-left: 0.5rem;
   }
 
+  .language-switcher {
+    margin-left: 0.25rem;
+  }
+
   .hero-grid,
   .section-grid,
   .stack-grid,
@@ -762,6 +830,23 @@ textarea:focus {
     max-width: 38vw;
   }
 
+  .language-switcher {
+    gap: 0.12rem;
+    padding: 0.16rem;
+  }
+
+  .language-option {
+    min-width: 2.35rem;
+    min-height: 34px;
+    gap: 0.16rem;
+    padding: 0.28rem 0.36rem;
+    font-size: 0.68rem;
+  }
+
+  .language-flag {
+    font-size: 0.84rem;
+  }
+
   .header-cta {
     min-height: 38px;
     padding: 0.58rem 0.72rem;
@@ -800,5 +885,32 @@ textarea:focus {
   .contact-meta,
   .about-points {
     gap: 0.55rem;
+  }
+}
+
+
+@media (max-width: 390px) {
+  .header-inner {
+    gap: 0.45rem;
+  }
+
+  .brand img {
+    width: 126px;
+    max-width: 31vw;
+  }
+
+  .language-option span:last-child {
+    display: none;
+  }
+
+  .language-option {
+    min-width: 1.72rem;
+    min-height: 32px;
+    padding-inline: 0.22rem;
+  }
+
+  .header-cta {
+    padding-inline: 0.48rem;
+    font-size: 0.72rem;
   }
 }
