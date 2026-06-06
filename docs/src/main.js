@@ -5,7 +5,7 @@ consultationForm?.addEventListener('submit', (event) => {
   event.preventDefault();
 
   if (formNotice) {
-    formNotice.textContent = 'Thank you. Connect this form to your secure contact endpoint to receive consultation requests.';
+    formNotice.textContent = 'Thank you. Connect this form to a secure endpoint to receive consultation requests.';
   }
 });
 
