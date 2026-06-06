@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 720" role="img" aria-labelledby="title desc">
+  <title id="title">DEWMIX digital operations hero visual</title>
+  <desc id="desc">Transparent layered DEWMIX dashboard with glowing connected operation panels.</desc>
+  <defs>
+    <linearGradient id="cyan" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#8aefff"/>
+      <stop offset="0.52" stop-color="#21c7f7"/>
+      <stop offset="1" stop-color="#0b82df"/>
+    </linearGradient>
+    <linearGradient id="emerald" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0" stop-color="#3ee69b"/>
+      <stop offset="1" stop-color="#d8f8ff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="26" stdDeviation="24" flood-color="#020711" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <g opacity="0.48" filter="url(#glow)">
+    <circle cx="692" cy="104" r="80" fill="#21c7f7"/>
+    <circle cx="188" cy="628" r="96" fill="#3ee69b"/>
+  </g>
+  <g fill="none" stroke="#21c7f7" stroke-opacity="0.18" stroke-width="2">
+    <path d="M82 559 C240 440 222 247 414 220 S695 161 826 58"/>
+    <path d="M108 174 C245 232 286 422 483 424 S712 506 835 641"/>
+  </g>
+  <g filter="url(#softShadow)">
+    <rect x="142" y="112" width="638" height="430" rx="34" fill="#071425" fill-opacity="0.88" stroke="#8bdfff" stroke-opacity="0.32"/>
+    <rect x="176" y="154" width="570" height="92" rx="24" fill="#ffffff" fill-opacity="0.055" stroke="#ffffff" stroke-opacity="0.09"/>
+    <rect x="176" y="274" width="254" height="214" rx="26" fill="#21c7f7" fill-opacity="0.10" stroke="#21c7f7" stroke-opacity="0.30"/>
+    <rect x="462" y="274" width="284" height="214" rx="26" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.10"/>
+    <path d="M220 391h53l38-67 42 100 40-73" fill="none" stroke="url(#emerald)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <g fill="#d8f8ff" opacity="0.9">
+      <circle cx="222" cy="200" r="11"/><circle cx="263" cy="200" r="11"/><circle cx="304" cy="200" r="11"/>
+    </g>
+    <g fill="none" stroke="url(#cyan)" stroke-linecap="round" stroke-width="9">
+      <path d="M514 333h146"/><path d="M514 382h184"/><path d="M514 431h118"/>
+    </g>
+    <g transform="translate(305 70) rotate(-8)">
+      <rect width="285" height="126" rx="26" fill="#02101d" stroke="#21c7f7" stroke-opacity="0.55"/>
+      <text x="34" y="55" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="800" fill="#f4f8fb">DEWMIX</text>
+      <text x="34" y="88" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="700" fill="#8aefff">OPERATIONS ONLINE</text>
+      <circle cx="235" cy="63" r="24" fill="#3ee69b" fill-opacity="0.2" stroke="#3ee69b"/>
+    </g>
+  </g>
+  <g fill="#21c7f7" opacity="0.64">
+    <circle cx="113" cy="344" r="5"/><circle cx="803" cy="287" r="5"/><circle cx="667" cy="615" r="5"/><circle cx="262" cy="70" r="5"/>
+  </g>
+</svg>
