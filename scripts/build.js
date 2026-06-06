@@ -10,5 +10,6 @@ await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
 await cp(join(projectRoot, 'index.html'), join(dist, 'index.html'));
 await cp(join(projectRoot, 'src'), join(dist, 'src'), { recursive: true });
+await cp(join(projectRoot, 'assets'), join(dist, 'assets'), { recursive: true });
 
-console.log('Built static site into dist/');
+console.log('Built static site into dist/ with brand assets.');

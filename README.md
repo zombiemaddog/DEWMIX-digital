@@ -6,7 +6,7 @@ A premium first-version marketing website for **DEWMIX Digital**, a Germany-back
 
 - Static HTML, CSS, and vanilla JavaScript
 - Zero runtime dependencies
-- Lightweight Node scripts for local serving and production builds
+- Lightweight Node scripts for local serving and production builds that preserve the branded assets in `dist/`
 - Responsive, mobile-first layout suitable for Vercel, Netlify, or any static host
 - Logo and favicon assets in `assets/` matched to the DEWMIX Digital blue/cyan brand palette
 - Enterprise-focused sections for Why DEWMIX, industries, process, support, methodology, stack, and business outcomes
