@@ -2392,3 +2392,272 @@ textarea:focus {
     url("../assets/office-bg.png") center / cover no-repeat;
   opacity: 0.1;
 }
+
+/* Requested layout-only brand artwork, section overlays, and flag-toggle updates */
+.brand img,
+.footer-brand img,
+.panel-top img {
+  width: 178px;
+  height: 58px;
+  object-fit: contain;
+  object-position: left center;
+  filter: drop-shadow(0 10px 24px rgba(33, 199, 247, 0.14));
+}
+
+.footer-brand img {
+  width: 168px;
+}
+
+.panel-top img {
+  width: 150px;
+  height: 50px;
+}
+
+.language-switcher {
+  width: 8.1rem;
+  min-width: 8.1rem;
+  height: 2.65rem;
+  gap: 0.24rem;
+  padding: 0.24rem;
+}
+
+.language-option {
+  position: relative;
+  width: 2.22rem;
+  height: 2.22rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.language-flag {
+  position: relative;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  opacity: 0.58;
+  filter: grayscale(0.45) saturate(0.82) brightness(0.82);
+  transform: scale(0.88);
+  transition:
+    opacity 180ms ease,
+    filter 180ms ease,
+    transform 180ms ease;
+}
+
+.language-flag::before,
+.language-flag::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.flag-uk {
+  background:
+    linear-gradient(90deg, transparent 43%, #ffffff 43% 57%, transparent 57%),
+    linear-gradient(0deg, transparent 43%, #ffffff 43% 57%, transparent 57%),
+    linear-gradient(35deg, transparent 44%, #ffffff 44% 51%, #c8102e 51% 57%, #ffffff 57% 64%, transparent 64%),
+    linear-gradient(-35deg, transparent 44%, #ffffff 44% 51%, #c8102e 51% 57%, #ffffff 57% 64%, transparent 64%),
+    #012169;
+}
+
+.flag-uk::before {
+  background:
+    linear-gradient(90deg, transparent 46%, #c8102e 46% 54%, transparent 54%),
+    linear-gradient(0deg, transparent 46%, #c8102e 46% 54%, transparent 54%);
+}
+
+.flag-th {
+  background: linear-gradient(180deg, #da291c 0 16%, #ffffff 16% 30%, #2d2a4a 30% 70%, #ffffff 70% 84%, #da291c 84% 100%);
+}
+
+.flag-de {
+  background: linear-gradient(180deg, #000000 0 33.333%, #dd0000 33.333% 66.666%, #ffce00 66.666% 100%);
+}
+
+.language-option:hover,
+.language-option:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 10px 26px rgba(33, 199, 247, 0.12);
+  transform: translateY(-2px);
+}
+
+.language-option:hover .language-flag,
+.language-option:focus-visible .language-flag {
+  opacity: 0.9;
+  filter: grayscale(0.08) saturate(1.08) brightness(1.03);
+  transform: scale(1);
+}
+
+.language-option.is-active {
+  background: linear-gradient(135deg, rgba(33, 199, 247, 0.9), rgba(216, 248, 255, 0.94));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 10px 28px rgba(33, 199, 247, 0.28);
+}
+
+.language-option.is-active .language-flag {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.72);
+  filter: saturate(1.12) brightness(1.08) drop-shadow(0 3px 7px rgba(2, 7, 17, 0.28));
+  transform: scale(1.06);
+}
+
+.process-section,
+.about-section,
+.contact-section {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.process-section > .container,
+.about-section > .container,
+.contact-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.process-section::before,
+.about-section::before,
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  mix-blend-mode: screen;
+  filter: saturate(1.08) contrast(1.06);
+}
+
+.process-section::before {
+  background-image:
+    radial-gradient(circle at 50% 46%, rgba(33, 199, 247, 0.12), transparent 28rem),
+    linear-gradient(90deg, rgba(5, 11, 19, 0.92), rgba(5, 11, 19, 0.42) 48%, rgba(5, 11, 19, 0.9)),
+    url("../assets/dewmix2.png");
+  background-position: center, center, 52% 50%;
+  background-size: auto, auto, min(66rem, 88vw) auto;
+  opacity: 0.24;
+}
+
+.about-section::before {
+  background-image:
+    radial-gradient(circle at 58% 44%, rgba(255, 213, 138, 0.12), transparent 25rem),
+    linear-gradient(90deg, rgba(5, 11, 19, 0.9), rgba(5, 11, 19, 0.34) 50%, rgba(5, 11, 19, 0.9)),
+    url("../assets/dewmix3.png");
+  background-position: center, center, 60% 50%;
+  background-size: auto, auto, min(64rem, 86vw) auto;
+  opacity: 0.28;
+}
+
+.contact-section::before {
+  background-image:
+    radial-gradient(circle at 50% 42%, rgba(33, 199, 247, 0.14), transparent 24rem),
+    linear-gradient(90deg, rgba(5, 11, 19, 0.94), rgba(5, 11, 19, 0.46) 46%, rgba(5, 11, 19, 0.94)),
+    url("../assets/dewmix-1-transparent.png");
+  background-position: center, center, 50% 44%;
+  background-size: auto, auto, min(60rem, 84vw) auto;
+  opacity: 0.22;
+}
+
+.process-list.narrative-list li,
+.about-copy,
+.contact-form {
+  backdrop-filter: blur(12px);
+}
+
+.contact-form {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(7, 20, 37, 0.68), rgba(7, 20, 37, 0.9)),
+    radial-gradient(circle at 16% 0%, rgba(255, 213, 138, 0.12), transparent 14rem),
+    url("../assets/dewmix2.png") center / 122% auto no-repeat;
+  opacity: 0.22;
+  mix-blend-mode: screen;
+  filter: saturate(1.12) contrast(1.06);
+}
+
+.contact-form > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 720px) {
+  .process-section::before,
+  .about-section::before,
+  .contact-section::before {
+    background-attachment: scroll;
+    background-size: auto, auto, 58rem auto;
+    opacity: 0.2;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand img {
+    width: 132px;
+    height: 46px;
+    max-width: 34vw;
+  }
+
+  .footer-brand img,
+  .panel-top img {
+    width: 132px;
+    height: 46px;
+  }
+
+  .language-switcher {
+    width: 6.8rem;
+    min-width: 6.8rem;
+    height: 2.32rem;
+    padding: 0.16rem;
+  }
+
+  .language-option {
+    width: 1.96rem;
+    height: 1.96rem;
+  }
+
+  .language-flag {
+    width: 1.28rem;
+    height: 1.28rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .brand img {
+    width: 112px;
+    height: 40px;
+    max-width: 30vw;
+  }
+
+  .language-switcher {
+    width: 6rem;
+    min-width: 6rem;
+  }
+
+  .language-option {
+    width: 1.72rem;
+    height: 1.72rem;
+  }
+
+  .language-flag {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+}
