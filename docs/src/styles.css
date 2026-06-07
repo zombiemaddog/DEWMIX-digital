@@ -2661,3 +2661,22 @@ textarea:focus {
     height: 1.1rem;
   }
 }
+
+/* Keep longer translated Thai and German copy inside narrow cards and mobile layouts. */
+[data-i18n],
+button,
+input,
+select,
+textarea,
+.service-card,
+.scenario-grid article,
+.ecosystem-node,
+.transformation-column,
+.stack-layers div,
+.process-list li,
+.proof-grid span,
+.about-points span,
+.contact-meta span {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
