@@ -21,14 +21,15 @@ function dewmix_digital_setup() {
 }
 add_action( 'after_setup_theme', 'dewmix_digital_setup' );
 
-
 /**
  * Base URL/path for existing DEWMIX image assets on the server.
  *
  * Change this value if your uploaded images live somewhere else, for example
  * '/wp-content/uploads/dewmix/' or 'https://example.com/assets/images/'.
  */
-define( 'DEWMIX_DIGITAL_IMAGE_BASE_URI', '/assets/' );
+if ( ! defined( 'DEWMIX_DIGITAL_IMAGE_BASE_URI' ) ) {
+	define( 'DEWMIX_DIGITAL_IMAGE_BASE_URI', '/assets/' );
+}
 
 /**
  * Build an image URL from the configurable server image base path.
