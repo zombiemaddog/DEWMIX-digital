@@ -1,7 +1,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <a class="footer-brand" href="#top" aria-label="DEWMIX Digital home">
-      <img src="<?php echo esc_url( dewmix_digital_image_uri( 'dewmix-logo.png' ) ); ?>" width="1100" height="228" alt="DEWMIX Digital" />
+      <img src="<?php echo esc_url( dewmix_digital_shared_asset_uri( 'dewmix-logo.png' ) ); ?>" width="1100" height="228" alt="DEWMIX Digital" />
     </a>
     <nav aria-label="Footer navigation">
       <a href="#problems" data-i18n="Problems">Problems</a>

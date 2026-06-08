@@ -22,25 +22,17 @@ function dewmix_digital_setup() {
 add_action( 'after_setup_theme', 'dewmix_digital_setup' );
 
 /**
- * Base URL/path for existing DEWMIX image assets on the server.
+ * Return a URL for shared image assets that already exist in the repository.
  *
- * Change this value if your uploaded images live somewhere else, for example
- * '/wp-content/uploads/dewmix/' or 'https://example.com/assets/images/'.
- */
-if ( ! defined( 'DEWMIX_DIGITAL_IMAGE_BASE_URI' ) ) {
-	define( 'DEWMIX_DIGITAL_IMAGE_BASE_URI', '/assets/' );
-}
-
-/**
- * Build an image URL from the configurable server image base path.
+ * The theme intentionally does not duplicate PNG/image binaries so GitHub PRs
+ * stay text-only. In this repository layout, the shared `assets/` directory is
+ * a sibling of the `dewmix-digital/` theme directory.
  *
- * @param string $filename Image filename relative to the configured base path.
+ * @param string $asset Asset filename relative to the shared assets directory.
  * @return string
  */
-function dewmix_digital_image_uri( $filename ) {
-	$base_uri = apply_filters( 'dewmix_digital_image_base_uri', DEWMIX_DIGITAL_IMAGE_BASE_URI );
-
-	return trailingslashit( $base_uri ) . ltrim( $filename, '/' );
+function dewmix_digital_shared_asset_uri( $asset ) {
+	return get_template_directory_uri() . '/../assets/' . ltrim( $asset, '/' );
 }
 
 /**
@@ -92,7 +84,7 @@ function dewmix_digital_inline_asset_urls() {
 		$custom_properties[] = sprintf(
 			'--dewmix-image-%1$s: url("%2$s");',
 			esc_attr( $property ),
-			esc_url( dewmix_digital_image_uri( $image ) )
+			esc_url( dewmix_digital_shared_asset_uri( $image ) )
 		);
 	}
 
@@ -124,7 +116,7 @@ add_filter( 'script_loader_tag', 'dewmix_digital_module_script_tag', 10, 3 );
  * Output favicon and image preloads used above the fold by the homepage.
  */
 function dewmix_digital_head_assets() {
-	$images    = array(
+	$images = array(
 		'dewmix-logo.png',
 		'dewmix2.png',
 		'dewmix3.png',
@@ -132,9 +124,9 @@ function dewmix_digital_head_assets() {
 		'3d-server-room.png',
 	);
 	?>
-	<link rel="icon" href="<?php echo esc_url( dewmix_digital_image_uri( 'favicon.svg' ) ); ?>" type="image/svg+xml" />
+	<link rel="icon" href="<?php echo esc_url( dewmix_digital_shared_asset_uri( 'favicon.svg' ) ); ?>" type="image/svg+xml" />
 	<?php foreach ( $images as $image ) : ?>
-		<link rel="preload" href="<?php echo esc_url( dewmix_digital_image_uri( $image ) ); ?>" as="image" type="image/png" />
+		<link rel="preload" href="<?php echo esc_url( dewmix_digital_shared_asset_uri( $image ) ); ?>" as="image" type="image/png" />
 	<?php endforeach; ?>
 	<?php
 }

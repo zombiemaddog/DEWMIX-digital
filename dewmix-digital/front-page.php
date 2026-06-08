@@ -11,7 +11,7 @@ get_header();
 <main id="main">
   <section class="hero" id="top">
     <div class="hero-brand-wash" aria-hidden="true">
-      <img src="<?php echo esc_url( dewmix_digital_image_uri( 'office-bg.png' ) ); ?>" width="1536" height="1024" alt="" />
+      <img src="<?php echo esc_url( dewmix_digital_shared_asset_uri( 'office-bg.png' ) ); ?>" width="1536" height="1024" alt="" />
     </div>
     <div class="container hero-grid">
       <div class="hero-copy">
@@ -34,10 +34,10 @@ get_header();
 
       <aside class="delivery-panel" aria-label="DEWMIX delivery stack">
         <figure class="panel-art hero-art" aria-label="DEWMIX connected operations visual">
-          <img src="<?php echo esc_url( dewmix_digital_image_uri( '3d-server-room.png' ) ); ?>" width="1536" height="1024" alt="DEWMIX server room with secured infrastructure and operations monitoring" />
+          <img src="<?php echo esc_url( dewmix_digital_shared_asset_uri( '3d-server-room.png' ) ); ?>" width="1536" height="1024" alt="DEWMIX server room with secured infrastructure and operations monitoring" />
         </figure>
         <div class="panel-top">
-          <img src="<?php echo esc_url( dewmix_digital_image_uri( 'dewmix-logo.png' ) ); ?>" width="1100" height="228" alt="DEWMIX Digital" />
+          <img src="<?php echo esc_url( dewmix_digital_shared_asset_uri( 'dewmix-logo.png' ) ); ?>" width="1100" height="228" alt="DEWMIX Digital" />
           <span class="status-pill stable" data-i18n="Operational partner">Operational partner</span>
         </div>
         <div class="stack-layers compact">
@@ -71,7 +71,7 @@ get_header();
 
   <section class="section problems-section" id="problems">
     <figure class="problem-atmosphere" aria-hidden="true">
-      <img src="<?php echo esc_url( dewmix_digital_image_uri( 'tan-bg.png' ) ); ?>" width="1536" height="1024" alt="" loading="lazy" />
+      <img src="<?php echo esc_url( dewmix_digital_shared_asset_uri( 'tan-bg.png' ) ); ?>" width="1536" height="1024" alt="" loading="lazy" />
     </figure>
     <div class="container problem-story-grid">
       <div class="section-heading sticky-heading">
@@ -162,7 +162,7 @@ get_header();
       </div>
       <div class="ecosystem-stage">
         <figure class="ecosystem-art" aria-hidden="true">
-          <img src="<?php echo esc_url( dewmix_digital_image_uri( 'server0-internal.png' ) ); ?>" width="1536" height="1024" alt="" loading="lazy" />
+          <img src="<?php echo esc_url( dewmix_digital_shared_asset_uri( 'server0-internal.png' ) ); ?>" width="1536" height="1024" alt="" loading="lazy" />
         </figure>
         <article class="ecosystem-node node-web"><span>01</span><strong data-i18n="Front door">Front door</strong><small data-i18n="Website, content, booking, quote, and lead capture.">Website, content, booking, quote, and lead capture.</small></article>
         <article class="ecosystem-node node-core"><span>02</span><strong data-i18n="Operating core">Operating core</strong><small data-i18n="Email, devices, cloud, files, access, and network.">Email, devices, cloud, files, access, and network.</small></article>
@@ -196,7 +196,7 @@ get_header();
         <h2 data-i18n="Concrete outcomes for businesses that need more than advice.">Concrete outcomes for businesses that need more than advice.</h2>
       </div>
       <figure class="collaboration-visual" aria-label="DEWMIX collaboration across Thailand, Germany, and the United Kingdom">
-        <img src="<?php echo esc_url( dewmix_digital_image_uri( '3d-3-flags.png' ) ); ?>" width="1402" height="1122" alt="DEWMIX collaboration wall showing Thailand, Germany, and United Kingdom flags" loading="lazy" />
+        <img src="<?php echo esc_url( dewmix_digital_shared_asset_uri( '3d-3-flags.png' ) ); ?>" width="1402" height="1122" alt="DEWMIX collaboration wall showing Thailand, Germany, and United Kingdom flags" loading="lazy" />
         <figcaption data-i18n="Thailand agility, German engineering standards, and UK software perspective working as one delivery model.">Thailand agility, German engineering standards, and UK software perspective working as one delivery model.</figcaption>
       </figure>
       <div class="scenario-grid">
@@ -232,7 +232,7 @@ get_header();
           secure setup, AI automation, media production, and ongoing support into one accountable service.
         </p>
         <figure class="trust-visual brand-watermark-card" aria-hidden="true">
-          <img src="<?php echo esc_url( dewmix_digital_image_uri( 'office-bg.png' ) ); ?>" width="1536" height="1024" alt="" loading="lazy" />
+          <img src="<?php echo esc_url( dewmix_digital_shared_asset_uri( 'office-bg.png' ) ); ?>" width="1536" height="1024" alt="" loading="lazy" />
         </figure>
         <div class="about-points">
           <span data-i18n="Clear ownership">Clear ownership</span>
